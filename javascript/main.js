@@ -6,9 +6,9 @@ $(document).ready(function(){
 
 
   }
-  function latlng(){
-    latitude = coords.latitude;
-    longitude = coords.longitude;
+  function latlng(position){
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
     alert(latitude);
     alert(longitude);
   }
