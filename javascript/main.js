@@ -1,15 +1,17 @@
 $(document).ready(function(){
   var latitude, longitude;
   function getLocation(){
-
         navigator.geolocation.getCurrentPosition(latlng);
 }
 function latlng(position){
   longitude = position.coords.latitude;
   latitude = position.coords.longitude;
+  console.log(typeof longitude);
   alert(latitude);
   alert(longitude);
 }
+getLocation();
+
   function initialize(lng, lat) {
     var mapOptions = {
       zoom: 12,
@@ -19,9 +21,8 @@ function latlng(position){
     var map = new google.maps.Map(document.getElementById('mapCanvas'),
         mapOptions);
   }
+initialize(longitude, latitude);
 
-
-  getLocation();
 
 
 
@@ -59,7 +60,7 @@ function latlng(position){
     });
 
 
-initialize(longitude, latitude);
+
 
   });
 >>>>>>> 57c4b7753088adb05f4d26fd72bd4bb41ad9318d
