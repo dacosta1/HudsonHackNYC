@@ -4,18 +4,15 @@ $(document).ready(function(){
         navigator.geolocation.getCurrentPosition(latlng);
 }
 function latlng(position){
-  longitude = position.coords.latitude;
-  latitude = position.coords.longitude;
-  console.log(typeof longitude);
-  alert(latitude);
-  alert(longitude);
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
 }
 getLocation();
 
-  function initialize(lng, lat) {
+  function initialize(lat, lng) {
     var mapOptions = {
       zoom: 12,
-      center: new google.maps.LatLng(lng, lat)
+      center: new google.maps.LatLng(lat, lng)
     };
 
     var map = new google.maps.Map(document.getElementById('mapCanvas'),
@@ -28,39 +25,38 @@ initialize(longitude, latitude);
 
 
   $('#theBronx').on("click", function(){
-    var bronxLat = -73.8860;
-    var bronxLng = 40.8373;
-    initialize(bronxLng, bronxLat);
+    var bronxLng= -73.8860;
+    var bronxLat= 40.8373;
+    initialize(bronxLat, bronxLng);
   });
 
   $('#Queens').on("click", function(){
-    var QLat = -73.8667;
-    var QLng = 40.7500;
-    initialize(QLng, QLat);
+    var QLng= -73.8667;
+    var QLat= 40.7500;
+    initialize(QLat, QLng);
   });
 
   $('#Brooklyn').on("click", function(){
-    var bkLat = -73.9903;
-    var bkLng = 40.6928;
-    initialize(bkLng, bkLat);
+    var bkLng= -73.9903;
+    var bkLat= 40.6928;
+    initialize(bkLat, bkLng);
     });
 
 
     $('#Manhattan').on("click", function(){
-      var MLat = -73.9597;
-      var MLng = 40.7903;
-      initialize(MLng, MLat);
+      var MLng= -73.9597;
+      var MLat= 40.7903;
+      initialize(MLat, MLng);
       });
 
 
       $('#StatenIsland').on("click", function(){
-      var SLat = -74.1448;
-      var SLng = 40.5763;
-      initialize(SLng, SLat);
+      var SLng= -74.1448;
+      var SLat= 40.5763;
+      initialize(SLat, SLng);
     });
 
 
 
 
   });
->>>>>>> 57c4b7753088adb05f4d26fd72bd4bb41ad9318d
