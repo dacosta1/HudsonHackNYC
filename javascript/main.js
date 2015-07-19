@@ -68,7 +68,7 @@ var apiUrl = encodeURIComponent("http://api.nytimes.com/svc/events/v2/listings.j
 $.getJSON("http://127.0.0.1:5000/proxy/?url=" + apiUrl + "&jsoncallback=?", function(data){
   $.each(data.results, function(index, value){
 
-  $('<div class="eventsDiv" id="event' + index + '">' + "<p> "+data.results[index].street_address+ "</p>" + "<p> "+data.results[index].event_name+ "</p>" + "<p>" + data.results[index].web_description + "</p>" + "<p> "+data.results[index].borough+ "</p>"+"<p> "+data.results[index].neighborhood+ "</p>"+'</div>').appendTo(".events");
+  $('<div class="eventsDiv" id="event' + index + '">' + "<h3> "+data.results[index].event_name+ "</h3>" + "<h4>Address</h4>"+"<p> "+data.results[index].street_address+ "</p>" + "<h4>Description</h4>"+"<p>" + data.results[index].web_description + "</p>" + "<h4>Borough</h4>"+"<p> "+data.results[index].borough + "</p>"+ "<h4>Address</h4>"+"<p>"+data.results[index].neighborhood+ "</p>"+'</div>').appendTo(".events");
   console.log(array1);
     });
 setTimeout(function(){
