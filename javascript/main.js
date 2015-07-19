@@ -1,36 +1,14 @@
 $(document).ready(function(){
-  var latitude, longitude, map;
-  function getLocation(){
 
-<<<<<<< HEAD
   function initialize(lng, lat) {
     var mapOptions = {
       zoom: 12,
       center: new google.maps.LatLng(lng, lat)
     };
-=======
-        navigator.geolocation.getCurrentPosition(latlng);
->>>>>>> 06209056cec587634cb6c7a2a888e91bc3cba791
 
-
+    var map = new google.maps.Map(document.getElementById('mapCanvas'),
+        mapOptions);
   }
-  function latlng(position){
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-  }
-<<<<<<< HEAD
-=======
-    getLocation();
-
-    function initialize(latitude, longitude) {
-    var mapOptions = {
-      zoom: 8,
-      center: new google.maps.LatLng(latitude, longitude)
-  };
-  mapCanvas = document.getElementById('mapCanvas');
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-}
->>>>>>> 06209056cec587634cb6c7a2a888e91bc3cba791
 
 
 
@@ -65,7 +43,6 @@ $(document).ready(function(){
       var SLng = 40.5763;
       initialize(SLng, SLat);
     });
-
 
 
 
