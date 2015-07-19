@@ -7,8 +7,8 @@ $(document).ready(function(){
 
   }
   function latlng(){
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
+    latitude = coords.latitude;
+    longitude = coords.longitude;
     alert(latitude);
     alert(longitude);
   }
