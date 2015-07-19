@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var latitude, longitude;
+  var latitude, longitude, map;
   function getLocation(){
 
         navigator.geolocation.getCurrentPosition(latlng);
@@ -11,14 +11,14 @@ $(document).ready(function(){
     longitude = position.coords.longitude;
   }
     getLocation();
+
     function initialize(latitude, longitude) {
     var mapOptions = {
       zoom: 8,
       center: new google.maps.LatLng(latitude, longitude)
   };
-
-  var map = new google.maps.Map(document.getElementById('mapCanvas'),
-      mapOptions);
+  mapCanvas = document.getElementById('mapCanvas');
+  var map = new google.maps.Map(mapCanvas, mapOptions);
 }
 
 });
