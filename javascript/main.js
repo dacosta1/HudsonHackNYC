@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var latitude, longitude, map;
+  var latitude, longitude;
   function getLocation(){
 
         navigator.geolocation.getCurrentPosition(latlng);
@@ -10,15 +10,15 @@ $(document).ready(function(){
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
   }
-    getLocation();
+  getLocation();
 
-    function initialize(latitude, longitude) {
+    function initialize(lat, long) {
     var mapOptions = {
       zoom: 8,
-      center: new google.maps.LatLng(latitude, longitude)
+      center: new google.maps.LatLng(lat, long)
   };
   mapCanvas = document.getElementById('mapCanvas');
   var map = new google.maps.Map(mapCanvas, mapOptions);
 }
-
+  initialize(latitude, longitude);
 });
