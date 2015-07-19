@@ -18,7 +18,7 @@ getLocation();
     var map = new google.maps.Map(document.getElementById('mapCanvas'),
         mapOptions);
   }
-initialize(longitude, latitude);
+initialize(latitude, longitude);
 
 
 
