@@ -1,14 +1,16 @@
 $(document).ready(function(){
+  var latitude, longitude;
+  function getLocation(){
 
-  function initialize() {
-    var mapOptions = {
-      zoom: 8,
-      center: new google.maps.LatLng(-34.397, 150.644)
-    };
+        navigator.geolocation.getCurrentPosition(latlng);
 
-    var map = new google.maps.Map(document.getElementById('mapCanvas'),
-        mapOptions);
+
   }
-  initialize();
-
+  function latlng(){
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+    alert(latitude);
+    alert(longitude);
+  }
+    getLocation();
 });
