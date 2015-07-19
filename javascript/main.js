@@ -7,6 +7,8 @@ $(document).ready(function(){
 function latlng(position){
   longitude = position.coords.latitude;
   latitude = position.coords.longitude;
+  alert(latitude);
+  alert(longitude);
 }
   function initialize(lng, lat) {
     var mapOptions = {
