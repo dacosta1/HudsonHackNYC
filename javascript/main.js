@@ -5,8 +5,8 @@ $(document).ready(function(){
         navigator.geolocation.getCurrentPosition(latlng);
 }
 function latlng(position){
-  latitude = position.coords.latitude;
-  longitude = position.coords.longitude;
+  longitude = position.coords.latitude;
+  latitude = position.coords.longitude;
 }
   function initialize(lng, lat) {
     var mapOptions = {
